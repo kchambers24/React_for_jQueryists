@@ -19,20 +19,20 @@ class TweetBox extends Component {
 }
 remainingCharacters() {
   if (this.state.photoAdded) {
-    return 140 - 23 - this.state.text.length;
-  } else {
-    return 140 - this.state.text.length;
+     return 140 - 23 - this.state.text.length;
+  }   else {
+       return 140 - this.state.text.length;
   }
 }
 overflowAlert() {
 
   if (this.remainingCharacters() < 0) {
     if (this.state.photoAdded) {
-  var beforeOverflowText = this.state.text.substring(140 - 23 - 10, 140 - 23);
-  var overflowText = this.state.text.substring(140 - 23);
+      var beforeOverflowText = this.state.text.substring(140 - 23 - 10, 140 - 23);
+      var overflowText = this.state.text.substring(140 - 23);
 } else {
-  var beforeOverflowText = this.state.text.substring(140 - 10, 140);
-  var overflowText = this.state.text.substring(140);
+     var beforeOverflowText = this.state.text.substring(140 - 10, 140);
+    var overflowText = this.state.text.substring(140);
 }
 
 
@@ -63,9 +63,5 @@ overflowAlert() {
     )
   }
 }
-
-
-
-
 
 export default TweetBox;
